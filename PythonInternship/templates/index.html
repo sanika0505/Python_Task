@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sentiment Analysis</title>
+        <style>
+        .container
+        {
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sentiment Analysis</h1>
+            <form method="post">
+                <input type="text" name="text" placeholder="Enter Text"
+                    required>
+                <button type="submit"> Submit </button>
+            </form>
+
+            { % if sentiment % }
+            <div class="result">
+                {{sentiment}}
+            </div>
+            {% endif %}
+
+        </div>
+    </body>
+</html>
